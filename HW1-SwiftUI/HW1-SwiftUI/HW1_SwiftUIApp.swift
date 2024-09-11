@@ -1,10 +1,3 @@
-//
-//  HW1_SwiftUIApp.swift
-//  HW1-SwiftUI
-//
-//  Created by Уля on 08.09.2024.
-//
-
 import SwiftUI
 
 @main

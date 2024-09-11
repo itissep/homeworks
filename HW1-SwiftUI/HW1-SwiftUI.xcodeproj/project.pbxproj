@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C79478A2C921DD8003E76D4 /* FirstScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7947892C921DD8003E76D4 /* FirstScreen.swift */; };
+		2C79478D2C921E26003E76D4 /* CaptionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79478C2C921E26003E76D4 /* CaptionText.swift */; };
+		2C79478F2C921E43003E76D4 /* TappableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79478E2C921E43003E76D4 /* TappableImage.swift */; };
+		2C7947912C921E6B003E76D4 /* CustomTabLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7947902C921E6B003E76D4 /* CustomTabLabel.swift */; };
+		2C7947932C921E9D003E76D4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7947922C921E9D003E76D4 /* CustomButton.swift */; };
+		2C7947982C921EE2003E76D4 /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7947972C921EE2003E76D4 /* ThirdScreen.swift */; };
+		2C79479A2C922020003E76D4 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7947992C922020003E76D4 /* SecondScreen.swift */; };
 		2C8943032C8E11920007F4D8 /* HW1_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8943022C8E11920007F4D8 /* HW1_SwiftUIApp.swift */; };
 		2C8943052C8E11920007F4D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8943042C8E11920007F4D8 /* ContentView.swift */; };
 		2C8943072C8E11960007F4D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8943062C8E11960007F4D8 /* Assets.xcassets */; };
 		2C89430A2C8E11960007F4D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8943092C8E11960007F4D8 /* Preview Assets.xcassets */; };
-		2C8943152C8E12640007F4D8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8943142C8E12640007F4D8 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C7947892C921DD8003E76D4 /* FirstScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreen.swift; sourceTree = "<group>"; };
+		2C79478C2C921E26003E76D4 /* CaptionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionText.swift; sourceTree = "<group>"; };
+		2C79478E2C921E43003E76D4 /* TappableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappableImage.swift; sourceTree = "<group>"; };
+		2C7947902C921E6B003E76D4 /* CustomTabLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabLabel.swift; sourceTree = "<group>"; };
+		2C7947922C921E9D003E76D4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2C7947972C921EE2003E76D4 /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
+		2C7947992C922020003E76D4 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
 		2C8942FF2C8E11920007F4D8 /* HW1-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW1-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8943022C8E11920007F4D8 /* HW1_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW1_SwiftUIApp.swift; sourceTree = "<group>"; };
 		2C8943042C8E11920007F4D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C8943062C8E11960007F4D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C8943092C8E11960007F4D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2C8943142C8E12640007F4D8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +46,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C79478B2C921E05003E76D4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2C79478C2C921E26003E76D4 /* CaptionText.swift */,
+				2C79478E2C921E43003E76D4 /* TappableImage.swift */,
+				2C7947902C921E6B003E76D4 /* CustomTabLabel.swift */,
+				2C7947922C921E9D003E76D4 /* CustomButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		2C8942F62C8E11920007F4D8 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +78,7 @@
 			children = (
 				2C8943022C8E11920007F4D8 /* HW1_SwiftUIApp.swift */,
 				2C8943042C8E11920007F4D8 /* ContentView.swift */,
+				2C79478B2C921E05003E76D4 /* UI */,
 				2C8943132C8E11C90007F4D8 /* Screens */,
 				2C8943062C8E11960007F4D8 /* Assets.xcassets */,
 				2C8943082C8E11960007F4D8 /* Preview Content */,
@@ -70,34 +94,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2C8943102C8E11A10007F4D8 /* HomeScreen */ = {
-			isa = PBXGroup;
-			children = (
-				2C8943142C8E12640007F4D8 /* HomeScreen.swift */,
-			);
-			path = HomeScreen;
-			sourceTree = "<group>";
-		};
-		2C8943112C8E11AB0007F4D8 /* SearchScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SearchScreen;
-			sourceTree = "<group>";
-		};
-		2C8943122C8E11BD0007F4D8 /* CalendarScreen */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CalendarScreen;
-			sourceTree = "<group>";
-		};
 		2C8943132C8E11C90007F4D8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				2C8943102C8E11A10007F4D8 /* HomeScreen */,
-				2C8943112C8E11AB0007F4D8 /* SearchScreen */,
-				2C8943122C8E11BD0007F4D8 /* CalendarScreen */,
+				2C7947892C921DD8003E76D4 /* FirstScreen.swift */,
+				2C7947992C922020003E76D4 /* SecondScreen.swift */,
+				2C7947972C921EE2003E76D4 /* ThirdScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -172,9 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C79478F2C921E43003E76D4 /* TappableImage.swift in Sources */,
 				2C8943052C8E11920007F4D8 /* ContentView.swift in Sources */,
+				2C79478A2C921DD8003E76D4 /* FirstScreen.swift in Sources */,
+				2C7947982C921EE2003E76D4 /* ThirdScreen.swift in Sources */,
+				2C7947912C921E6B003E76D4 /* CustomTabLabel.swift in Sources */,
 				2C8943032C8E11920007F4D8 /* HW1_SwiftUIApp.swift in Sources */,
-				2C8943152C8E12640007F4D8 /* HomeScreen.swift in Sources */,
+				2C79479A2C922020003E76D4 /* SecondScreen.swift in Sources */,
+				2C7947932C921E9D003E76D4 /* CustomButton.swift in Sources */,
+				2C79478D2C921E26003E76D4 /* CaptionText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
