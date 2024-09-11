@@ -23,6 +23,6 @@ struct FirstScreen: View {
                     selectedTab = 1
                 }
             }
-        }
+        }.navigationViewStyle(.stack)
     }
 }

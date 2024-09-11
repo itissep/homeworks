@@ -20,7 +20,7 @@ struct SecondScreen: View {
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)
             }
-        }
+        }.navigationViewStyle(.stack)
     }
 }
 
