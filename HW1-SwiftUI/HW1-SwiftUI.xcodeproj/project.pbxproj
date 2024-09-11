@@ -14,6 +14,8 @@
 		2C7947932C921E9D003E76D4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7947922C921E9D003E76D4 /* CustomButton.swift */; };
 		2C7947982C921EE2003E76D4 /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7947972C921EE2003E76D4 /* ThirdScreen.swift */; };
 		2C79479A2C922020003E76D4 /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7947992C922020003E76D4 /* SecondScreen.swift */; };
+		2C79479C2C9225E2003E76D4 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79479B2C9225E2003E76D4 /* SegmentedControl.swift */; };
+		2C79479F2C9226A1003E76D4 /* Int+formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C79479E2C9226A1003E76D4 /* Int+formatted.swift */; };
 		2C8943032C8E11920007F4D8 /* HW1_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8943022C8E11920007F4D8 /* HW1_SwiftUIApp.swift */; };
 		2C8943052C8E11920007F4D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8943042C8E11920007F4D8 /* ContentView.swift */; };
 		2C8943072C8E11960007F4D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8943062C8E11960007F4D8 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		2C7947922C921E9D003E76D4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		2C7947972C921EE2003E76D4 /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
 		2C7947992C922020003E76D4 /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
+		2C79479B2C9225E2003E76D4 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		2C79479E2C9226A1003E76D4 /* Int+formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+formatted.swift"; sourceTree = "<group>"; };
 		2C8942FF2C8E11920007F4D8 /* HW1-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW1-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8943022C8E11920007F4D8 /* HW1_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HW1_SwiftUIApp.swift; sourceTree = "<group>"; };
 		2C8943042C8E11920007F4D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,8 +57,17 @@
 				2C79478E2C921E43003E76D4 /* TappableImage.swift */,
 				2C7947902C921E6B003E76D4 /* CustomTabLabel.swift */,
 				2C7947922C921E9D003E76D4 /* CustomButton.swift */,
+				2C79479B2C9225E2003E76D4 /* SegmentedControl.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2C79479D2C922692003E76D4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C79479E2C9226A1003E76D4 /* Int+formatted.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		2C8942F62C8E11920007F4D8 = {
@@ -78,6 +91,7 @@
 			children = (
 				2C8943022C8E11920007F4D8 /* HW1_SwiftUIApp.swift */,
 				2C8943042C8E11920007F4D8 /* ContentView.swift */,
+				2C79479D2C922692003E76D4 /* Helpers */,
 				2C79478B2C921E05003E76D4 /* UI */,
 				2C8943132C8E11C90007F4D8 /* Screens */,
 				2C8943062C8E11960007F4D8 /* Assets.xcassets */,
@@ -174,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C79479F2C9226A1003E76D4 /* Int+formatted.swift in Sources */,
 				2C79478F2C921E43003E76D4 /* TappableImage.swift in Sources */,
 				2C8943052C8E11920007F4D8 /* ContentView.swift in Sources */,
 				2C79478A2C921DD8003E76D4 /* FirstScreen.swift in Sources */,
@@ -181,6 +196,7 @@
 				2C7947912C921E6B003E76D4 /* CustomTabLabel.swift in Sources */,
 				2C8943032C8E11920007F4D8 /* HW1_SwiftUIApp.swift in Sources */,
 				2C79479A2C922020003E76D4 /* SecondScreen.swift in Sources */,
+				2C79479C2C9225E2003E76D4 /* SegmentedControl.swift in Sources */,
 				2C7947932C921E9D003E76D4 /* CustomButton.swift in Sources */,
 				2C79478D2C921E26003E76D4 /* CaptionText.swift in Sources */,
 			);

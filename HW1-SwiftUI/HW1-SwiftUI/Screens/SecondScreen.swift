@@ -30,7 +30,7 @@ struct CardView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(index)")
+            Text("\((index + 1).formatted)")
                 .font(.system(size: 20, design: .monospaced))
         }
         .padding(.all, 20)
@@ -47,7 +47,7 @@ struct DetailView: View {
 
     var body: some View {
         VStack {
-            CaptionText("this is \(index) item", color)
+            CaptionText("this is \(index + 1) item", color)
             TappableImage(imageName: "target", color: color)
         }
     }
