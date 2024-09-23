@@ -22,6 +22,7 @@ struct CharacterListScreen: View {
             if models.isEmpty {
                 Spacer()
                 ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
                 Spacer()
             } else {
                 List {

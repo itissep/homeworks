@@ -14,6 +14,7 @@ struct AsyncImageView: View {
             },
             placeholder: {
                 ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .accentColor))
                     .frame(width: 200, height: 200)
             }
         )
