@@ -51,4 +51,8 @@ extension Data {
     func toAPIResponse() throws -> APIResponse {
         try JSONDecoder().decode(APIResponse.self, from: self)
     }
+    
+    func toEpisode() throws -> Episode {
+        try JSONDecoder().decode(Episode.self, from: self)
+    }
 }

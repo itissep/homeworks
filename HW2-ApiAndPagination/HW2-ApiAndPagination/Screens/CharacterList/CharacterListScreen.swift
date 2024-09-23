@@ -17,9 +17,12 @@ struct CharacterListScreen: View {
                 }
             }
             .pickerStyle(.segmented)
+            .padding()
             
             if models.isEmpty {
+                Spacer()
                 ProgressView()
+                Spacer()
             } else {
                 List {
                     ForEach(models) { item in
@@ -41,9 +44,9 @@ struct CharacterListScreen: View {
                             .onAppear {
                                 Task {
                                     self.page += 1
-                                    let result = try await NetworkingService.fetch(
-                                        .characters(page, selectedStatus)
-                                    ).toAPIResponse()
+                                    let result = try await NetworkingService
+                                        .fetch(.characters(page, selectedStatus))
+                                        .toAPIResponse()
                                     self.models += result.results
                                     
                                     if result.info.next == nil {
@@ -53,6 +56,7 @@ struct CharacterListScreen: View {
                             }
                     }
                 }
+                .listStyle(.plain)
                 .overlay {
                     VStack {
                         Spacer()
@@ -69,20 +73,18 @@ struct CharacterListScreen: View {
         }
         .onChange(of: selectedStatus) {
             Task {
-                do {
-                    let result = try await NetworkingService.fetch(.characters(1, selectedStatus)).toAPIResponse()
-                    self.models = result.results
-                } catch {
-                    print("Fuck")
-                }
+                self.models = try await NetworkingService
+                    .fetch(.characters(1, selectedStatus))
+                    .toAPIResponse()
+                    .results
             }
         }
         .task {
-            do {
-                let result = try await NetworkingService.fetch(.characters(1, .all)).toAPIResponse()
-                self.models = result.results
-            } catch {
-                print("Fuck")
+            Task {
+                self.models = try await NetworkingService
+                    .fetch(.characters(1, .all))
+                    .toAPIResponse()
+                    .results
             }
         }
     }
