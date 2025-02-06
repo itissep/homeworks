@@ -9,12 +9,32 @@ final class ViewModel: ObservableObject {
     }
     
     enum SortingType: String {
-        case asc = "ASC"
-        case desc = "DESC"
+        case asc = "ascending"
+        case desc = "descending"
+        
+        func check(_ first: String, _ second: String) -> Bool {
+            switch self {
+            case .asc: first < second
+            case .desc: first > second
+            }
+        }
+    }
+    
+    enum FilteringType: String {
+        case moreThen = "more then"
+        case only = "only"
+        
+        func check(_ count: Int) -> Bool {
+            switch self {
+            case .moreThen: count >= Settings.suffixRange
+            case .only: count == Settings.suffixRange
+            }
+        }
     }
     
     // General
     @Published var text: String = Settings.defaultText
+    @Published var filteringType: FilteringType = FilteringType.only
     
     // All
     @Published var sortingType: SortingType = SortingType.asc
@@ -68,7 +88,7 @@ final class ViewModel: ObservableObject {
         while let word = wordIterator.next() {
             let suffixSequence = SuffixSequence(word)
             for suffix in suffixSequence {
-                if suffix.count >= Settings.suffixRange {
+                if filteringType.check(suffix.count) {
                     suffixes[suffix] = (suffixes[suffix] ?? 0) + 1
                 }
             }
@@ -76,7 +96,7 @@ final class ViewModel: ObservableObject {
         
         let suffixArray = suffixes.map { Suffix(suffix: $0, count: $1) }
         
-        items = suffixArray.sorted(by: { sortBy == .asc ? $0.suffix < $1.suffix : $0.suffix > $1.suffix })
+        items = suffixArray.sorted(by: { sortBy.check($0.suffix, $1.suffix) } )
         
         if !searchString.isEmpty {
             items = items?.filter { $0.suffix.starts(with: searchString) }
@@ -84,7 +104,7 @@ final class ViewModel: ObservableObject {
         
         topItems = Array(
             suffixArray
-                .filter { $0.suffix.count == Settings.suffixRange }
+                .filter { filteringType.check($0.suffix.count) }
                 .sorted { $0.count > $1.count }
                 .prefix(Settings.topNumber)
         )
