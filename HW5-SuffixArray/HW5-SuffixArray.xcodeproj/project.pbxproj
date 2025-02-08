@@ -6,20 +6,84 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2C93DA252D555BA000A47AF1 /* HW5-ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2C93DA1B2D555B9F00A47AF1 /* HW5-ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C93DA232D555BA000A47AF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C444E7A2D5400D700408FC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C93DA1A2D555B9F00A47AF1;
+			remoteInfo = "HW5-ShareExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2C93DA2A2D555BA000A47AF1 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2C93DA252D555BA000A47AF1 /* HW5-ShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		2C444E822D5400D700408FC8 /* HW5-SuffixArray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW5-SuffixArray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C93DA1B2D555B9F00A47AF1 /* HW5-ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HW5-ShareExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2C93DA262D555BA000A47AF1 /* Exceptions for "HW5-ShareExtension" folder in "HW5-ShareExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2C93DA1A2D555B9F00A47AF1 /* HW5-ShareExtension */;
+		};
+		2C93DA2E2D5741AF00A47AF1 /* Exceptions for "HW5-SuffixArray" folder in "HW5-SuffixArray" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 2C444E812D5400D700408FC8 /* HW5-SuffixArray */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2C444E842D5400D700408FC8 /* HW5-SuffixArray */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2C93DA2E2D5741AF00A47AF1 /* Exceptions for "HW5-SuffixArray" folder in "HW5-SuffixArray" target */,
+			);
 			path = "HW5-SuffixArray";
+			sourceTree = "<group>";
+		};
+		2C93DA1C2D555B9F00A47AF1 /* HW5-ShareExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2C93DA262D555BA000A47AF1 /* Exceptions for "HW5-ShareExtension" folder in "HW5-ShareExtension" target */,
+			);
+			path = "HW5-ShareExtension";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2C444E7F2D5400D700408FC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C93DA182D555B9F00A47AF1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				2C444E842D5400D700408FC8 /* HW5-SuffixArray */,
+				2C93DA1C2D555B9F00A47AF1 /* HW5-ShareExtension */,
 				2C444E832D5400D700408FC8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				2C444E822D5400D700408FC8 /* HW5-SuffixArray.app */,
+				2C93DA1B2D555B9F00A47AF1 /* HW5-ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,10 +121,12 @@
 				2C444E7E2D5400D700408FC8 /* Sources */,
 				2C444E7F2D5400D700408FC8 /* Frameworks */,
 				2C444E802D5400D700408FC8 /* Resources */,
+				2C93DA2A2D555BA000A47AF1 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2C93DA242D555BA000A47AF1 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				2C444E842D5400D700408FC8 /* HW5-SuffixArray */,
@@ -69,6 +137,28 @@
 			productName = "HW5-SuffixArray";
 			productReference = 2C444E822D5400D700408FC8 /* HW5-SuffixArray.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2C93DA1A2D555B9F00A47AF1 /* HW5-ShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C93DA272D555BA000A47AF1 /* Build configuration list for PBXNativeTarget "HW5-ShareExtension" */;
+			buildPhases = (
+				2C93DA172D555B9F00A47AF1 /* Sources */,
+				2C93DA182D555B9F00A47AF1 /* Frameworks */,
+				2C93DA192D555B9F00A47AF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2C93DA1C2D555B9F00A47AF1 /* HW5-ShareExtension */,
+			);
+			name = "HW5-ShareExtension";
+			packageProductDependencies = (
+			);
+			productName = "HW5-ShareExtension";
+			productReference = 2C93DA1B2D555B9F00A47AF1 /* HW5-ShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +171,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					2C444E812D5400D700408FC8 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					2C93DA1A2D555B9F00A47AF1 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -100,12 +193,20 @@
 			projectRoot = "";
 			targets = (
 				2C444E812D5400D700408FC8 /* HW5-SuffixArray */,
+				2C93DA1A2D555B9F00A47AF1 /* HW5-ShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2C444E802D5400D700408FC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C93DA192D555B9F00A47AF1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +223,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C93DA172D555B9F00A47AF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C93DA242D555BA000A47AF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C93DA1A2D555B9F00A47AF1 /* HW5-ShareExtension */;
+			targetProxy = 2C93DA232D555BA000A47AF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2C444E8E2D5400DB00408FC8 /* Debug */ = {
@@ -249,11 +365,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HW5-SuffixArray/HW5-SuffixArray.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35953V9L7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HW5-SuffixArray/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HW5;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -282,11 +400,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HW5-SuffixArray/HW5-SuffixArray.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 35953V9L7K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HW5-SuffixArray/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HW5;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -310,6 +430,58 @@
 			};
 			name = Release;
 		};
+		2C93DA282D555BA000A47AF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HW5-ShareExtension/HW5-ShareExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35953V9L7K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HW5-ShareExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "HW5-ShareExtension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gui.HW5-SuffixArray.HW5-ShareExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2C93DA292D555BA000A47AF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "HW5-ShareExtension/HW5-ShareExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35953V9L7K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HW5-ShareExtension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "HW5-ShareExtension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gui.HW5-SuffixArray.HW5-ShareExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +499,15 @@
 			buildConfigurations = (
 				2C444E912D5400DB00408FC8 /* Debug */,
 				2C444E922D5400DB00408FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C93DA272D555BA000A47AF1 /* Build configuration list for PBXNativeTarget "HW5-ShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C93DA282D555BA000A47AF1 /* Debug */,
+				2C93DA292D555BA000A47AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
