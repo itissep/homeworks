@@ -92,8 +92,7 @@ struct ContentView: View {
             UISegmentedControl.appearance().selectedSegmentTintColor = UIColor.white
             UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.accent], for: .selected)
             UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
-            
-            viewModel.sortingType = .desc
         }
+        .onOpenURL { _ in viewModel.sortingType = viewModel.sortingType == .asc ? .desc : .asc }
     }
 }
