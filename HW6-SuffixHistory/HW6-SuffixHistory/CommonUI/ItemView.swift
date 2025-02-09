@@ -1,32 +1,31 @@
 import SwiftUI
 
 struct ItemView: View {
-    var title: String
-    var subtitle: String
-    var color: Color
+    var model: ResultItem
     
     var body: some View {
         HStack {
-            Text(title)
-                .font(.largeTitle)
-                .foregroundStyle(.dark)
-                .monospaced()
-                .lineLimit(1)
+            VStack(alignment: .leading) {
+                Text(model.string)
+                    .font(.largeTitle)
+                    .foregroundStyle(model.color)
+                    .monospaced()
+                
+                Text(model.suffixes)
+                    .font(.caption)
+                    .foregroundStyle(.white)
+                    .monospaced()
+            }
             Spacer()
-            Circle()
-                .foregroundColor(.dark)
-                .frame(width: 50, height: 50)
-                .overlay {
-                    Text(subtitle)
-                        .font(.title)
-                        .monospaced()
-                        .foregroundStyle(.white)
-                }
+            
+            Text(String(format: "%.6f сек", model.duration))
+                .monospaced()
+                .foregroundStyle(.white)
         }
         .padding(.all, Style.spacing)
         .background {
             RoundedRectangle(cornerRadius: Style.cornerRadius)
-                .foregroundStyle(color)
+                .foregroundStyle(model.color.opacity(0.1))
         }
     }
 }

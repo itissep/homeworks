@@ -1,13 +1,6 @@
 import SwiftUI
 
 extension Color {
-    
-    static func rarity(for count: Int) -> Color {
-        if count == 2 { return .rare }
-        if count <= 6  { return .uncommon }
-        return .common
-    }
-    
     static func speed(for value: TimeInterval, minTime: TimeInterval, maxTime: TimeInterval) -> Color {
         let startColor: UIColor = .green
         let endColor: UIColor = .red
