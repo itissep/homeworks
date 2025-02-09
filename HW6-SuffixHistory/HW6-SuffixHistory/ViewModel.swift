@@ -7,6 +7,8 @@ final class ViewModel: ObservableObject {
     @Published var text: String = Settings.defaultText
     @Published var items: [ResultItem] = []
 
+    @Published var summary = ""
+    
     private var subscriptions = Array<AnyCancellable>()
     let scheduler: JobScheduler
     
@@ -17,6 +19,7 @@ final class ViewModel: ObservableObject {
     
     private func setup() {
         $text
+            .debounce(for: .milliseconds(500), scheduler: RunLoop.main)
             .sink { [weak self] newText in
                 guard let self = self else {
                     return
@@ -24,10 +27,24 @@ final class ViewModel: ObservableObject {
                 update(using: newText)
             }
             .store(in: &subscriptions)
+        
+        Task {
+            await scheduler.$isRunning
+                .receive(on: DispatchQueue.main)
+                .sink { [weak self] _ in
+                    guard let self = self else {
+                        return
+                    }
+                    updateSummary()
+                }
+                .store(in: &subscriptions)
+        }
     }
     
     private func update(using string: String) {
         items.removeAll()
+        summary = ""
+        
         string.components(separatedBy: " ").forEach { addJobToQueue(for: $0) }
     }
     
@@ -53,6 +70,13 @@ final class ViewModel: ObservableObject {
         Task {
             await scheduler.add(job)
         }
+    }
+    
+    private func updateSummary() {
+        let count = items.count
+        let avarageTime = items.map { $0.duration }.reduce(0, +) / Double(items.count)
+        
+        summary = "count: \(count) | avarage time: " + String(format: "%.6f sec", avarageTime)
     }
     
     private func updateColors() {

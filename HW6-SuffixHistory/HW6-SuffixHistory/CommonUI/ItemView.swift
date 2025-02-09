@@ -18,7 +18,7 @@ struct ItemView: View {
             }
             Spacer()
             
-            Text(String(format: "%.6f сек", model.duration))
+            Text(String(format: "%.6f sec", model.duration))
                 .monospaced()
                 .foregroundStyle(.white)
         }

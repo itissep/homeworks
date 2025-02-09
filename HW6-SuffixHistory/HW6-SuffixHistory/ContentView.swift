@@ -18,9 +18,17 @@ struct ContentView: View {
                         RoundedRectangle(cornerRadius: Style.cornerRadius)
                             .foregroundStyle(Color.accent.opacity(0.1))
                     }
-                    .padding(.all, Style.spacing)
+                    .padding(.horizontal, Style.spacing)
+                    .padding(.top, Style.spacing)
                     .frame(maxWidth: .infinity)
                     .frame(height: 100)
+                
+                Text(viewModel.summary)
+                    .foregroundStyle(.accent.opacity(0.5))
+                    .monospaced()
+                    .font(.caption)
+                    .padding(.horizontal, Style.spacing)
+                    .padding(.bottom, Style.spacing)
                 
                 TitleView(title: "strings")
             

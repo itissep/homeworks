@@ -2,7 +2,7 @@ import Foundation
 
 actor JobScheduler {
     
-    private var isRunning = false
+    @Published var isRunning = false
     private let jobQueue = JobQueue()
     
     func add(_ job: Job) {
