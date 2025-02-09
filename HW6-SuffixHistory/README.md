@@ -44,4 +44,4 @@
 
 ## Итог
 
-<image src="/readmeImages/1.png" caption="Экран" width="540" height="400">
+<image src="1.png" caption="Экран" width="240" height="520">
